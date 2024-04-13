@@ -12,8 +12,8 @@ from django.db.models import Avg
 
 # Create your views here.
 
-def home(request):
-    return render(request,'home.html')
+# def home(request):
+#     return render(request,'home.html')
 
 def index(request):
     movie = Movie.objects.all()
