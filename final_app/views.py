@@ -424,7 +424,10 @@ def rating(request, movie_id):
     # You may want to redirect the user back to the movie detail page with an error message
     return redirect('detail', movie_id=movie_id)
  
- 
- 
+def movie_category(request, category_id):
+    category = get_object_or_404(Category, pk=category_id)
+    movies = Movie.objects.filter(category=category).all()
+    categories =  Category.objects.all()
+    return render(request, 'index.html', {'categories': categories, 'movie': movies})
  
  
