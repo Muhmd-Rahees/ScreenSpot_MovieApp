@@ -2,7 +2,7 @@ from . import views
 from django.urls import path
 
 urlpatterns = [
-
+path('',views.home,name='home'),
     path('dashboard/', views.index, name='index'),  # Define the root URL pattern
     path('profile/', views.profile, name='profile'),
     path('movie/<int:movie_id>/', views.detail, name='detail'),
@@ -16,8 +16,9 @@ urlpatterns = [
     path('deleting-credential/<int:movie_id>/', views.deleting_credential, name='deleting_credential'),
     path('user_rating/<int:movie_id>/',views.user_rating,name='user_rating'),
     path('add_rating/<int:movie_id>/', views.add_rating, name='add_rating'),
-    path('',views.home,name='home'),
+    
 
+    path('dashboard/movie_category/<int:category_id>/', views.movie_category, name='movie_category'),
 
 
 
