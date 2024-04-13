@@ -18,7 +18,7 @@ urlpatterns = [
     path('add_rating/<int:movie_id>/', views.add_rating, name='add_rating'),
     
 
-    path('dashboard/movie_category/<int:category_id>/', views.movie_category, name='movie_category'),
+    path('movie_category/<int:category_id>/', views.movie_category, name='movie_category'),
 
 
 
